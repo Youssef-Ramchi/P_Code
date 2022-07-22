@@ -1,0 +1,587 @@
+@font-face {
+    font-family: 'TtFinsNeueR';
+    font-family: 'TtFinsNeueEx';
+    src: url(TtFinsNeueEx.ttf);
+    src: url(TTfinsNeueR.ttf);
+}
+@font-face {
+    font-family: 'PoppinsM';
+    font-family: 'PoppinsR';
+    src: url(PoppinsM.otf);
+    src: url(PoppinsR.otf);    
+}
+
+*{
+    margin: 0;
+    padding: O;
+    box-sizing: border-box;
+    transition: 1s;
+}
+
+.login-icon{
+    display: none;
+
+}
+
+.bar-icon{
+
+    display: none;
+
+}
+
+body {
+    font-family: outfit;
+}
+
+.bar{
+    margin-top: 23px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "logo logo logo list list list list list list con con con";
+    align-items: center;
+}
+
+.logo{
+    grid-area: logo;
+    grid-column-start: 2;
+
+}
+.div-img{
+    width: 25px;
+}
+.pcode{
+    font-family: 'TtFinsNeueEx';
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #F4D06A;
+    display: inline-block;
+    margin-left: 10px;
+}
+.satr{
+    display: flex;
+    align-items: center;
+}
+span{
+    color: #4A5A62;
+}
+
+.point{
+    font-size:xx-large;
+    margin-top: -51px;
+    color: #4A5A62;
+    margin-left: 33.5px;
+
+}
+
+.list{
+    grid-area: list;
+    text-align: center;
+}
+
+.list li{
+    display: inline-block;
+    margin: 0 25px;
+    color: rgb(175, 175, 175) ;
+    font-size: 17px;
+    transition: .3s;
+}
+.list li:hover{
+    transform: translateY(-4px);
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+}
+.list ul :first-child{
+    color: rgb(66, 66, 66);
+}
+
+.con{
+    grid-area: con;
+    border: 1px solid #7c7c7c99 ;
+    border-radius: 4px;
+    text-align: center;
+    grid-column-end: 11;
+    grid-column-start: 11;
+    padding: 12px 0;
+    font-weight: 500;
+    font-size: 17px;
+    color: #4A5A62;
+    cursor: pointer;
+}
+.con:hover{
+    color: white;
+    background-color: #4A5A62;
+    transition: .5s;
+}
+
+.body{
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: " body body body body body body img img img img img img ";
+    align-items: center;
+}
+
+.left{
+    grid-area: body;
+    grid-column-start:2 ;
+}
+
+
+.img-zone{
+    grid-area: img;
+    text-align: center;
+    grid-column-end: 12;
+    text-align: right;
+    
+}
+
+h1{
+    font-size: 86px;
+    margin-top: -50px;
+    font-family: 'TtFinsNeueEx';
+}
+
+.get{
+    color: #DBDBDB;
+    transform: rotate(4deg);
+    animation-name: get;
+    animation-duration: 1.5s;
+}
+
+.moudern{
+    margin-top: -62px;
+    margin-bottom: 8px;
+    color: #4A5A62;
+    transform: rotate(-4deg);
+    animation-name: modern;
+    animation-duration: 1.5s;
+    transition-timing-function: ease-in;
+
+}
+.cod{
+    color: #F4D06A;
+    margin-left: 50px;
+    margin-top: -40px;
+    margin-bottom: 10px;
+    animation-name: code;
+    animation-duration: 1.5s;
+}
+.title{
+    margin-bottom: 20px;
+}
+
+.description{
+    color: #999999;
+    letter-spacing: 0.5px;
+    margin-top: -20px;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight:inherit;
+    margin-bottom: 40px;
+    font-family: 'PoppinsR';
+    opacity: 0;
+    animation-name: description;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+    animation-fill-mode:forwards;
+}
+
+.inline{
+    display: flex;
+    align-items: center;
+    animation-name: inline ;
+    animation-duration: 1.5s ;
+}
+.get-start{
+    float: left;
+    width: 28%;
+    background-color:#4A5A62 ;
+    color: antiquewhite;
+    padding: 18px 0;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: .5s;
+    cursor: pointer;
+}
+.get-start:hover{
+    transform: rotate(360deg);
+}
+.watch-pad{
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  
+}
+.watch{
+    cursor: pointer;
+    transition: .3s;
+}
+.watchv{
+    margin-left: 10px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #4A5A62;
+    display: inline-block;
+}
+
+.watch:hover{
+    width: 30px;
+}
+
+
+.img-anm{
+    width: 460px;
+    animation-name: img;
+    animation-duration: 1.5s;
+    animation-fill-mode:forwards;
+}
+
+hr{
+    margin-top:  90px;
+    opacity: .4;
+}
+
+.grid-three{
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-areas: " zone-one zone-one zone-one zone-one zone-two zone-two zone-two zone-three zone-three zone-three zone-three";
+    align-items: center;
+    gap: 0 20px;
+    margin: 50px 0;
+}
+
+.zone-one{
+    grid-area: zone-one;
+    grid-column-start: 2;
+}
+.zone-two{
+    grid-area: zone-two;
+}
+.zone-three{
+    grid-area: zone-three;
+    grid-column-end: 11;
+}
+
+
+.find{
+    width: 100%;
+    height: 260px;
+    padding: 50px 35px;
+    font-family:  'tt firs neue';
+    transition: .3s;
+    letter-spacing: 2px;
+}
+.description-of-title{
+    margin-top: 27px;
+    line-height: 25px;
+    font-size: 17px;
+    color: rgb(155, 155, 155);
+    font-family: outfit;
+    letter-spacing: 1px;
+}
+.title-of-skills{
+    font-family: 'PoppinsR';
+    font-size: 19px;
+    font-weight: 600;
+    color: rgb(55, 64, 79);
+    display: inline-block; 
+    margin-left: 25px;
+    letter-spacing: 0.6px;
+}
+
+.find:hover{
+    box-shadow: 6px 15px 60px 0px rgb(227, 227, 227) ;
+    cursor: pointer;
+}
+.najm{
+    font-family: outfit;
+    font-weight: 400;
+    font-size: 57px;
+    color: #F4D06A;
+}
+.img{
+    width: 35px;
+    height: 35px;
+}
+.coding{
+    height: 35px;
+    width: 30px;
+}
+.title-center{
+    display: flex;
+    align-items: center;
+}
+.flesh{
+    width: 85px;
+    position: absolute;
+    top: 360px;
+    left: 45%;
+    opacity: 0;
+    animation-name: flesh;
+    animation-delay: 1.5s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+.star{
+    width: 48px;
+    position: absolute;
+    top: 155px;
+    left: 35%;
+    opacity: 0;
+    animation-name: najm;
+    animation-delay: 1.5s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+.list-media{
+    display: none;
+}
+.nav-bar{
+    width: 38px;
+    opacity: .8;
+}
+
+@keyframes get {
+    0%{
+        position: absolute;
+        top: -400px;
+    }
+    100%{
+        position: relative;
+        top:0;
+        left: 0;
+    }
+    
+}
+
+@keyframes modern {
+    0%{
+        position: relative;
+        bottom: 0;
+        left: -400px;
+    }
+    100%{
+        position: relative;
+        bottom:0;
+        left: 0;
+    }
+    
+}
+
+@keyframes code {
+    0%{
+        position: relative;
+        right: -400px;
+        opacity: 0;
+    }
+    100%{
+        position: relative;
+        top:0;
+        right: 0;
+        opacity: 1;
+    }
+    
+}
+
+@keyframes description {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+@keyframes inline {
+    0%{
+        position: relative;
+        top: 400px;
+        opacity: 0;
+    }
+    100%{
+        position: relative;
+        top: 0;
+        opacity: 1;
+    }
+    
+}
+@keyframes img {
+    0%{
+        position: relative;
+        top:0;
+        right: -700px;
+    }
+    100%{
+        position: relative;
+        top:0;
+        right: 0;
+    }
+    
+}
+
+
+@keyframes najm {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+@keyframes flesh {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+@media (max-width:1000px) {
+    .bar{
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-areas: " logo logo logo logo logo logo bar bar login login ";
+        align-items: center;
+    }
+    .bar-icon{
+        grid-area: bar ;
+        display: inline;
+        text-align: center;
+        grid-column-start: 8;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        cursor: pointer;
+        padding-right: 4px;
+    }
+    
+    .logo{
+        grid-area: logo;
+        grid-column-start: 2;
+    }
+    .login-icon{
+        grid-area: login;
+        display: inline;
+        grid-column-end: 10;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        cursor: pointer;
+    }
+    .log-icon{
+        width: 18px;
+    }
+    .get-start{
+        width: 170px;
+    }
+    .con{
+        display: none;
+    }
+    .list{
+        display: none;
+    }
+    
+    .body{
+        margin-top: 120px;
+        display:block;
+    }
+
+    .left{
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-areas: "dis dis dis dis dis dis dis dis dis dis";
+        margin: 20px 0;
+    }
+    .media-left{
+        grid-area: dis;
+        grid-column-start: 2;
+    }
+
+    .img-zone{
+        text-align: center;
+    }
+
+    .flesh{
+        position:initial ;
+        margin: 60px 40% 80px ;
+        text-align: center;
+        transform: rotate(80deg);
+        height: 35px;
+        width: 60px;
+    
+    }
+    .star{
+        position: absolute;
+        top: 140px;
+        left: 73%;
+    }
+    .grid-three{
+        display: block;
+        margin-top: 50px;
+        margin-bottom: 0;
+    }
+
+    .find{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .list .login-icon{
+        display: inline ;
+        grid-area: login;
+        cursor: pointer;
+    }
+    .bar .login-icon:hover .bar .list{ 
+        display: inline;
+    }
+
+}
+
+@media (max-width:500px) {
+    h1{
+        font-size: 65px;
+    }
+    .moudern{
+        margin-top: -45px;
+    }
+    .description{
+        font-size: 13px;
+        margin-bottom: 30px;
+    }
+    .get-start{
+        width: 140px;
+        font-size: 13px;
+    }
+    .watchv{
+        font-size: 13px;
+    }
+    .img-anm{
+        width: 340px;
+    }
+    .star{
+        width: 40px;
+    }
+    .watch-pad{
+        margin-left: 30px;
+    }
+    .nav-bar{
+        width: 35px;
+    }
+    .log-icon{
+        width: 16px;
+    }
+    .bar-icon{
+        justify-content: center;
+    }
+}
